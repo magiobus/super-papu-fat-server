@@ -9,6 +9,36 @@ block content
     div(id="mapContainer" style="height:100%; width:100%; display:block")
       div(id="map")
 
+
+
+
+    // Trigger/Open The Modal
+  button#myBtn Open Modal
+    // The Modal
+    #myModal.modal
+      // Modal content
+      .modal-content
+        .modal-header
+          span.close &times;
+          div(id='profile-pic')
+           img(id="myProfileImage", src="https://pbs.twimg.com/profile_images/466608337262350336/Ybpv3YAt.jpeg", alt="helloMyFriend")
+          |       
+          h2 Mariana
+        |     
+        .modal-body
+          p ¿Qué opinas de su comida?
+          input(type="text", id="comen") 
+          br
+          br
+          br      
+          img(src="img/01-vips-uruguay.jpg")
+           
+        |     
+        .modal-footer
+           hr
+           input.button.nosano(type="button", value="No Sano", id="nsano",  onclick="opin(this)") 
+           input.button.sano(type="button", value="Sano", id="sano",  onclick="opin(id)") 
+
 block scripts
 
   script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAW3JnAkxa949CeXgum563tsz_6EahZJZ8&signed_in=true&callback=initMap')  

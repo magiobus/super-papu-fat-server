@@ -3,12 +3,7 @@ header
     img(id="myProfileImage", src="https://pbs.twimg.com/profile_images/466608337262350336/Ybpv3YAt.jpeg", alt="helloMyFriend")
   div(class='friends-container')
     ul
-      li 
+      each i in [1,2,3]
+       li 
         div(class='friends-box')
-          img(class="friendImage", src="https://pbs.twimg.com/profile_images/466608337262350336/Ybpv3YAt.jpeg", alt="helloMyFriend")
-      li 
-        div(class='friends-box')
-          img(class="friendImage", src="https://pbs.twimg.com/profile_images/466608337262350336/Ybpv3YAt.jpeg", alt="helloMyFriend")
-      li 
-        div(class='friends-box')
-          img(class="friendImage", src="https://pbs.twimg.com/profile_images/466608337262350336/Ybpv3YAt.jpeg", alt="helloMyFriend")
+          img(class="friendImage", src="img/profile-0"+i+".jpg", alt="helloMyFriend")
