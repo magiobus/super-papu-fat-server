@@ -1,4 +1,10 @@
+html {
+  width: 100%;
+  height: 100%; }
+
 body {
+  width: 100%;
+  height: 100%;
   background: #FFFFFF;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin: 0;

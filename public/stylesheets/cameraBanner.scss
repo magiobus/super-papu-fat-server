@@ -4,6 +4,12 @@ $banner-border-color: #000;
 $banner-image-box-size: 15vh;
 
 .camera-banner-container{
+
+  position: absolute;
+  bottom: 50px;
+  left: 0px;
+  z-index: 999;
+
   background-color: $banner-background;
   margin: 1em;
   border: solid $banner-border-color $banner-border;
@@ -29,12 +35,15 @@ $banner-image-box-size: 15vh;
   }
 
   .icon-container{
+    background-image: url("../images/camoff.png");
+    background-size: $banner-image-box-size;
+    background-repeat: no-repeat;
+
+    display: block;
     padding: 0;
     margin: 0;
     text-align: right;
-    img{
-      width: $banner-image-box-size;
-      height: $banner-image-box-size;
-    }
+    width: $banner-image-box-size;
+    height: $banner-image-box-size;
   }
 }
