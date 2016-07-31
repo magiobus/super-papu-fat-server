@@ -1,4 +1,16 @@
 extends layout
+
 block content
-  h1= title
-  p Bienvenido a #{title}
+  div(id="mainContainer")
+    div(id="resetLocation")
+      input(type="image", value="*",onClick="centermap()", src="img/center_direction-512.png", id="center")
+    div(id="progressBar")
+    div(id="avatarImage")
+    div(id="mapContainer" style="height:100%; width:100%; display:block")
+      div(id="map")
+
+    input(accept="image/*" type="file" capture)
+
+block scripts
+  script(src="js/js.js")
+  script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAW3JnAkxa949CeXgum563tsz_6EahZJZ8&signed_in=true&callback=initMap')
