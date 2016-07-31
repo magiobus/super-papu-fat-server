@@ -19,7 +19,7 @@ function initMap() {
 
 
 
-var marc = 'img/pin-location.png';
+var marc = 'img/pin-17.png';
 
 var posit = new google.maps.Marker({map: map, icon: marc});
 
@@ -61,7 +61,7 @@ function setMarkers(map) {
 
   for (i = 0; i < locations.length; i++){  
 
-    var image = 'img/pin-place.png' ;
+    var image = 'img/pin-18.png' ;
 
  var loan = locations[i][0]
  var lat = locations[i][1]
@@ -71,7 +71,7 @@ function setMarkers(map) {
  latlngset = new google.maps.LatLng(lat, long);
 
   var marker = new google.maps.Marker({  
-          map: map, title: loan , position: latlngset  
+          map: map, title: loan , position: latlngset, icon: image
         });
 
 
