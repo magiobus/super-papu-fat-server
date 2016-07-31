@@ -10,9 +10,4 @@ router.get('/mapa', function(req, res, next) {
   res.render('mapa', { title: 'Mapa' });
 });
 
-
-router.get('/', function(req, res, next) {
-  res.render('test', {})
-});
-
 module.exports = router;
