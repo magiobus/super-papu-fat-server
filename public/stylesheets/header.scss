@@ -9,31 +9,36 @@ $header-friend-box-size: 6vh;
 
 
 header {
-  background: radial-gradient(circle at 100% 50%, transparent 20%, rgba(0,0,0,.8) 21%, rgba(0,0,0,.8) 34%, transparent 35%, transparent),
-              radial-gradient(circle at 0% 50%, transparent 20%, rgba(0,0,0,.8) 21%, rgba(0,0,0,.8) 34%, transparent 35%, transparent) 0 -50px;
+  //background: radial-gradient(circle at 100% 50%, transparent 20%, rgba(0,0,0,.8) 21%, rgba(0,0,0,.8) 34%, transparent 35%, transparent),
+  //            radial-gradient(circle at 0% 50%, transparent 20%, rgba(0,0,0,.8) 21%, rgba(0,0,0,.8) 34%, transparent 35%, transparent) 0 -50px;
   align-items: center;
-  background-color: $header-background;
-  background-size:75px 100px;
+  //background-size:75px 100px;
   display: flex;
-  height: 18vh;
+  height: 17vh;
   justify-content: space-around;
+
+  background-color: $header-background;
+  background-image: url("../img/textura-header-15-15.png");
+  //background-size: 100% 18vh;
+  background-repeat: no-repeat;
 }
 
 #profile-pic {
   align-items: center;
-  background-color: $header-box-background;
+  background-color: #efd97b;
   border-color: black;
   border-style: solid;
   border-width: $header-box-border;
   display: flex;
   flex-direction: column;
-  height: $header-box-profile-height;
+  //height: $header-box-profile-height;
   justify-content: center;
-  padding: 2vh;
-  width: 6vh;
+  height: $header-box-friends-height;
+  width: $header-box-friends-height;
+  //width: 6vh;
   img{
-    width: $header-friend-box-size;
-    height: $header-friend-box-size;
+    height: 110px;
+    width: 110px;
     border-radius: 5em;
     border: solid $header-box-border-background $header-box-border;
   }
@@ -41,12 +46,12 @@ header {
 
 .friends-container {
   align-items: center;
-  background: $header-box-background;
+  background: #efd97b;
   border: solid $header-box-border $header-box-border-background;
   display: flex;
   height: $header-box-friends-height;
   justify-content: center;
-  width:25vh;
+  width:28vh;
   ul{
     align-items: center;
     display: flex;
@@ -56,10 +61,11 @@ header {
     padding: 0;
     width: 100%;
     li{
+      margin: 10px;
       .friends-box{
         img{
-          width: $header-friend-box-size;
-          height: $header-friend-box-size;
+          height: 110px;
+          width: 110px;
           border-radius: 5em;
           border: solid $header-box-border-background $header-box-border;
         }

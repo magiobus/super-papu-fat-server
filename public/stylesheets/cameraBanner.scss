@@ -22,16 +22,19 @@ $banner-image-box-size: 250px;
   .content-container{
     display: flex;
     flex-direction: column;
-    padding: 0 1em;
+    margin: 0px 10px;
+    //margin-top: 1em;
+    //padding: 0 1em;
     align-items: flex-start;
     flex: 1;
     .title{
-      font-size: 2.5vh;
+      margin: 10px 0 0 20px;
+      font-size: 55px;
     }
     .text{
+      margin: 20px 10px 5px 20px;
       color: #BDBDBD;
-      font-size: 1.75vh;
-      padding: 0 1em 0 0;
+      font-size: 2vh;
     }
   }
 
