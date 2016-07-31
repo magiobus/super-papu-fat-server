@@ -1,7 +1,11 @@
+//Body SASS
+$body-background: #FFFFFF;
+
 body {
-  padding: 50px;
+  background: $body-background;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: #00ffff;
+  margin: 0;
+  padding: 0;
 }
 
 a {
