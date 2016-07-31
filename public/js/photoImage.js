@@ -1,6 +1,6 @@
-function readURL(input) {
+var foodImageForm = $("#foodImageForm");
 
-  console.log('***********')
+function readURL(input) {
 
     if (input.files && input.files[0]) {
         var reader = new FileReader();
@@ -10,10 +10,24 @@ function readURL(input) {
         }
 
         reader.readAsDataURL(input.files[0]);
+
+        foodImageForm.submit();
     }
 }
 
 $("#uploadPhoto").change(function () {
-  console.log('***********')
   readURL(this);
+});
+
+foodImageForm.submit(function () {
+
+  $(this).ajaxSubmit({
+    error: function(xhr) {
+     status('Error: ' + xhr.status);
+    },
+    success: function(response) {
+     imageUploaded(response.imageUrl);
+    }
+ });
+  return false;
 });

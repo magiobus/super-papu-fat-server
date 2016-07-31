@@ -3,5 +3,6 @@ div(class="camera-super-wrapper")
     div(class='content-container')
       h1(class="title") Telmex Hub Cafe.
       p(class="text") Comprueba a tus watchers que estas comiendo saludable con una foto.
-    input(id="uploadPhoto" class="icon-container" accept="image/*" type="file" capture)
+    form(id="foodImageForm", method="post", enctype="multipart/form-data", action="/upload-image/")
+      input(id="uploadPhoto", name="foodPhoto", class="icon-container" accept="image/*" type="file" capture)
     

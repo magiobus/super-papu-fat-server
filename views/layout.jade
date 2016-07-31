@@ -10,6 +10,13 @@ html
   body
     include includes/header.jade
     block content
+    img(id="sendedImage", hidden)
     include includes/cameraBanner.jade
-
+    
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
+    script(src="http://malsup.github.com/jquery.form.js")
+    
+    script(src="/socket.io/socket.io.js")
+    script(src="/js/communication.js")
     block scripts
+    

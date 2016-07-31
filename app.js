@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+
 var session = require('express-session');
 var passport = require('passport');
 
@@ -14,6 +15,9 @@ var serializers = require('./passport/serializers');
 var strategies = require('./passport/strategies')
 
 var app = express();
+
+var socketio = require('socket.io');
+var http = require('http');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -85,6 +89,19 @@ app.use(function(err, req, res, next) {
   });
 });
 
-exports.app = app
+
+/*SOCKET IO*/
+var port = process.env.PORT || '3000';
+app.set('port', port);
+
+var server = http.createServer(app);
+var io = socketio(server);
+
+require('./socket')(io);
+
+/*SOCKET IO*/
+
+exports.port = port;
+exports.server = server;
 exports.passport = passport
 //module.exports = app;
