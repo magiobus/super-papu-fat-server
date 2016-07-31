@@ -1,17 +1,18 @@
 $banner-background: #FFF;
 $banner-border: 0.45em;
 $banner-border-color: #000;
-$banner-image-box-size: 15vh;
+$banner-image-box-size: 250px;
 
 .camera-banner-container{
 
+  font-family: 'Raleway', sans-serif;
   position: absolute;
   bottom: 50px;
   left: 0px;
   z-index: 999;
 
   background-color: $banner-background;
-  margin: 1em;
+  margin: 5px 50px;
   border: solid $banner-border-color $banner-border;
   display: flex;
   flex-direction: row;

@@ -1,14 +1,15 @@
 .camera-banner-container {
+  font-family: 'Raleway', sans-serif;
   position: absolute;
   bottom: 50px;
   left: 0px;
   z-index: 999;
   background-color: #FFF;
-  margin: 1em;
+  margin: 5px 50px;
   border: solid #000 0.45em;
   display: flex;
   flex-direction: row;
-  height: 15vh;
+  height: 250px;
   align-items: center;
   flex: 1; }
   .camera-banner-container .content-container {
@@ -25,11 +26,11 @@
       padding: 0 1em 0 0; }
   .camera-banner-container .icon-container {
     background-image: url("../images/camoff.png");
-    background-size: 15vh;
+    background-size: 250px;
     background-repeat: no-repeat;
     display: block;
     padding: 0;
     margin: 0;
     text-align: right;
-    width: 15vh;
-    height: 15vh; }
+    width: 250px;
+    height: 250px; }
