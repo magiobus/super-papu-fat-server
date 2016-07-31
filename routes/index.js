@@ -10,10 +10,6 @@ router.get('/mapa', function(req, res, next) {
   res.render('mapa', { title: 'Mapa' });
 });
 
-
-router.get('/', function(req, res, next) {
-  res.render('test', {})
-});
 router.get('/foto', function(req, res, next) {
   res.render('foto', {})
 });
