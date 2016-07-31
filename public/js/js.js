@@ -10,6 +10,10 @@ function initMap() {
 
 
 
+
+
+
+
   // Try HTML5 geolocation.
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -32,17 +36,15 @@ function initMap() {
 
 
   var beaches = [
-  ['Vips Sucursal Uruguay', 19.430409,-99.1378282],
+  ['Telmex Hub', 19.431210,-99.136844],
   ['Legendaria', 19.4305814,-99.1361782],
   ['Restaurante Uruguay', 19.4308972,-99.1390719],
   ['El Sazón 3', 19.4308242,-99.1373825],
   ['La Esquina del Pibe', 19.4308609,-99.1386576],
   ['El Charco de las Ranas', 19.4305776,-99.1387891],
-  ['Casa Churra', 19.4306119,-99.1385636],
   ['Salón China', 19.4305776,-99.1387891],
   ['Los Cocuyos', 19.4308066,-99.1385454],
-  ['Azul Histórico', 19.4319177,-99.1382265],
-  ["tu gfa", 19.4305814,-99.1361882]];
+  ['Azul Histórico', 19.4319177,-99.1382265]];
 
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
