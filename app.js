@@ -5,8 +5,13 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
+var session = require('express-session');
+var passport = require('passport');
+
+//var passportConf = require('../passport/index');
+
+var serializers = require('./passport/serializers');
+var strategies = require('./passport/strategies')
 
 var app = express();
 
@@ -16,14 +21,38 @@ app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+var sesionObj = session({
+  secret: 'awesomedashboard',
+  resave: false,
+  saveUninitialized: true,
+});
+
+//passport = passportConf(passport);
+
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+passport.serializeUser(serializers.serializeUser);
+passport.deserializeUser(serializers.deserializeUser);
+passport.use('facebook', strategies.facebookAuth)
+
+app.use(session({ secret: 'sun', resave:true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+var routes = require('./routes/index');
+var users = require('./routes/users');
+var passportRoutes = require('./routes/passport')(passport);
+
 app.use('/', routes);
 app.use('/users', users);
+app.use('/auth', passportRoutes)
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -56,5 +85,6 @@ app.use(function(err, req, res, next) {
   });
 });
 
-
-module.exports = app;
+exports.app = app
+exports.passport = passport
+//module.exports = app;
