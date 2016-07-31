@@ -1,40 +1,69 @@
 //Header SASS
 $header-background: #B165E3;
+$header-box-border: 0.45em;
+$header-box-border-background: #000;
+$header-box-background: #FFF;
+$header-box-friends-height: 11vh;
+$header-box-profile-height: 7vh;
+$header-friend-box-size: 6vh;
+
 
 header {
   background: radial-gradient(circle at 100% 50%, transparent 20%, rgba(0,0,0,.8) 21%, rgba(0,0,0,.8) 34%, transparent 35%, transparent),
               radial-gradient(circle at 0% 50%, transparent 20%, rgba(0,0,0,.8) 21%, rgba(0,0,0,.8) 34%, transparent 35%, transparent) 0 -50px;
+  align-items: center;
   background-color: $header-background;
   background-size:75px 100px;
-  height:10vh;
-  padding:4vh;
+  display: flex;
+  height: 18vh;
+  justify-content: space-around;
 }
 
 #profile-pic {
-  background-color:white;
-  height:6vh;
-  width:6vh;
-  border-style:solid;
-  border-width:0.5em;
-  border-color:black;
-  padding:2vh;
-  #photo{
-    background-image: url(https://avatars.io/twitter/grafofilia/medium);
-    height:5vh;
-    width:5vh;
-    border-radius:50%;
-    border-width:0.5em;
-    border-style:solid;
+  align-items: center;
+  background-color: $header-box-background;
+  border-color: black;
+  border-style: solid;
+  border-width: $header-box-border;
+  display: flex;
+  flex-direction: column;
+  height: $header-box-profile-height;
+  justify-content: center;
+  padding: 2vh;
+  width: 6vh;
+  img{
+    width: $header-friend-box-size;
+    height: $header-friend-box-size;
+    border-radius: 5em;
+    border: solid $header-box-border-background $header-box-border;
   }
 }
 
-#friends {
-  background-color:white;
-  height:6vh;
-  width:6vh;
-  margin-left:5em;
-  border-style:solid;
-  border-width:0.5em;
-  border-color:black;
-  display:inline-block;
+.friends-container {
+  align-items: center;
+  background: $header-box-background;
+  border: solid $header-box-border $header-box-border-background;
+  display: flex;
+  height: $header-box-friends-height;
+  justify-content: center;
+  width:25vh;
+  ul{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    li{
+      .friends-box{
+        img{
+          width: $header-friend-box-size;
+          height: $header-friend-box-size;
+          border-radius: 5em;
+          border: solid $header-box-border-background $header-box-border;
+        }
+      }
+    }
+  }
 }
