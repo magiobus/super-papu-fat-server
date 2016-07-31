@@ -2,11 +2,16 @@
 module.exports = function (io) {
   io.on('connection', function (socket) {
 
-    //socket.broadcast.emit('loadNewImage', {imageUrl: 'sendNudes'});
-
     socket.on('imageUploaded', function (data) {
-      console.log('data: ', data)
-      socket.broadcast.emit('loadNewImage', data);
+      socket.broadcast.emit('loadNewImage', {
+        imageUrl: data.imageUrl,
+        emmiterId: socket.id
+      });
     });
+
+    socket.on('sendReaction', function (data) {
+      socket.to(data.emmiterId).emit('reciveReaction', data.reaction);
+    });
+
   });
 }
