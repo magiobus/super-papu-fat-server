@@ -75,7 +75,7 @@ function setMarkers(map) {
         });
 
 
-        var content = loan + "<img src='images/camon.png'>"     
+        var content = "<h1>"+loan+"</h1>" + "<img src='images/camon.png'>"     
 
   var infowindow = new google.maps.InfoWindow()
 
