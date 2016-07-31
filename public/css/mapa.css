@@ -32,7 +32,7 @@
   background-image: url("../img/01-healthy.png");
   background-size: 220px;
   background-repeat: no-repeat;
-  z-index: 999; }
+  z-index: 998; }
 
 #progressBar {
   position: absolute;
@@ -41,5 +41,5 @@
   width: 2.5%;
   height: 65%;
   background: #efd97b;
-  z-index: 999;
+  z-index: 998;
   border: 6px solid black; }

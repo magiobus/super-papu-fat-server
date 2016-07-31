@@ -1,8 +1,8 @@
 /* The Modal (background) */
 .modal {
+    z-index: 999; /* Sit on top */
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
@@ -15,6 +15,7 @@
 
 /* Modal Content */
 .modal-content {
+    z-index: 999; /* Sit on top */
     position: relative;
     background-color: #fefefe;
     margin: auto;
@@ -30,7 +31,7 @@
 
 /* Add Animation */
 @-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0} 
+    from {top:-300px; opacity:0}
     to {top:0; opacity:1}
 }
 
@@ -87,5 +88,5 @@
     background-color: #4CAF50; /* Green */
 }
 .nosano{
-    background-color: #f44336; /* Red */ 
+    background-color: #f44336; /* Red */
 }

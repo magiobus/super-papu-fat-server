@@ -12,15 +12,20 @@ function imageUploaded (imageUrl){
 }
 
 socket.on('loadNewImage', function (data) {
-  //socket.emit('sendReaction', {reaction: 'Temamas'})
-  //alert(data.imageUrl)
 
-  console.log('data when new image: ', data)
-
-  socket.emit('sendReaction', {reaction: 'ok', emmiterId: data.emmiterId})
+  //socket.emit('sendReaction', {reaction: 'ok', emmiterId: data.emmiterId})
 
   $("#sendedImage").attr('src', data.imageUrl)
-  $("#sendedImage").show();
+  $("#myBtn").click()
+
+  $("#sano").click(function(){
+    socket.emit('sendReaction', {reaction: 'ok', emmiterId: data.emmiterId})
+  });
+
+  $("#nsano").click(function(){
+    socket.emit('sendReaction', {reaction: 'no', emmiterId: data.emmiterId})
+  });
+
 })
 
 socket.on('reciveReaction', function (data) {
