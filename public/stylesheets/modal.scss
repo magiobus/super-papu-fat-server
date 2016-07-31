@@ -90,3 +90,33 @@
 .nosano{
     background-color: #f44336; /* Red */
 }
+
+#reactionsResult {
+  z-index: 999; /* Sit on top */
+  //display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  padding-top: 100px; /* Location of the box */
+  left: 15%;
+  top: 300px;
+  width: 70%; /* Full width */
+  height: 30%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(100,0,0); /* Fallback color */
+}
+
+#reactionsResultText {
+  color: white;
+  height: 100px;
+  font-size: 10em;
+}
+
+.closeWrapper {
+  position: relative;
+}
+
+#closeResultsPopup {
+  font-size: 5em;
+  position: absolute;
+  right: 0;
+  top: 0;
+}

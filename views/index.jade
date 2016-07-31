@@ -39,8 +39,11 @@ block content
            input.button.nosano(type="button", value="No Sano", id="nsano",  onclick="opin(this)") 
            input.button.sano(type="button", value="Sano", id="sano",  onclick="opin(id)")
     
-  div#reactionsResult
-    p#reactionsResultText
+  #reactionsResult(hidden)
+    .closeWrapper
+      a#closeResultsPopup cerrar
+    #reactionsResultText sii
+    
    
 block scripts
 

@@ -1,5 +1,8 @@
 //var images = $(".friends-box");
 
+var reactionsResultDiv = $("#reactionsResult");
+var reactionsResultText = $("#reactionsResultText")
+
 function displayResult(results) {
   var counterOk = 0;
   var counterNo = 0;
@@ -10,10 +13,17 @@ function displayResult(results) {
       counterNo += 1;
   });
 
+  var resultText;
 
   if(counterOk > counterNo){
-    console.log('Siiii')
+    resultText = 'Siiii'
   }else {
-    console.log('Noooo')
+    resultText = 'Noooo'
   }
+
+  console.log(resultText)
+
+  reactionsResultText.text(resultText)
+  reactionsResultDiv.show()
+
 }
