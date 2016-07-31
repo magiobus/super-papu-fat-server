@@ -2,7 +2,7 @@
   ['Telmex Hub', 19.431210,-99.136844, "1"],
   ['Legendaria', 19.4305814,-99.1361782, "2"],
   ['Restaurante Uruguay', 19.4308972,-99.1390719, "3"],
-  ['El Sazón 3', 19.4308242,-99.1373825, "4"],
+  ['El Sazón', 19.4308242,-99.1373825, "4"],
   ['La Esquina del Pibe', 19.4308609,-99.1386576],
   ['El Charco de las Ranas', 19.4305776,-99.1387891],
   ['Salón China', 19.4305776,-99.1387891],
@@ -72,7 +72,7 @@ function setMarkers(map) {
         });
 
 
-        var content = "<h1>"+loan+"</h1>" + "<img src='images/camon.png'>"     
+        var content = "<center><h1>"+loan+"</h1>" + "<img src='img/0"+i+".jpg'></center>"     
 
   var infowindow = new google.maps.InfoWindow()
 
@@ -118,6 +118,7 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
 
 
    //---------------modal------------
